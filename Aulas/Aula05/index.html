@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="REFRESH" content="10">
+    <title>Aula 05 - Document Object Model - DOM</title>
+    <style>
+        body {
+            background: darkgrey;
+            color: white;
+            font: normal 15pt serif;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Iniciando com o DOM</h1>
+    <p>Aprendendo com o <strong>DOM</strong> no Javascript</p>
+    <p>Primeiro exemplo DOM</p>
+    <div class="msg">Inciando...</div>
+    <h1 class='titulo2'>Seleção de elementos</h1>
+    <p>A seleção de elementos pode ser feita: </p>
+    <ul>
+        <li>Por marca</li>
+        <li>Por ID</li>
+        <li>POr Nome</li>
+        <li>Por Classe</li>
+        <li>Por Seletor</li>
+    </ul>
+
+    <script>
+        //Seleção
+        
+        //por marca
+        let p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write('-->' + p1.innerHTML)
+        
+        //por id
+        let id = window.document.getElementById('titulo')
+        id.style.background = 'blue'
+        id.innerHTML = "Iniciando com DOM"
+        
+        // Por classe
+        let classe = window.document.getElementsByClassName('msg')[0]
+        classe.style.color = 'red'   
+
+        //por seletor
+        var seletor = window.document.querySelector('msg')[1]
+
+        seletor.style.background = 'black'
+         
+    </script>
+</body>
+</body>
+</html>
